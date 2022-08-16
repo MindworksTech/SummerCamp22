@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import ToDoList from "./components/ToDoList";
+import React, { useState, useRef } from "react";
 
 function App() {
+
+  const [todos, setTodos] = useState([]);
+
+  const todoInput = useRef()
+
+  function handleAdd(e) {
+    const text = todoInput.current.value;
+
+    if (text === '') {
+      return;
+    }
+
+    setTodos([...todos, { id: todos.length+1, text, done: false }]);
+
+    todoInput.current.value = '';
+  }
+
+  function toggleTodo(id) {
+    const newTodos = [...todos]
+    const todo = newTodos.find(todo => todo.id === id)
+    todo.done = !todo.done
+    setTodos(newTodos)
+  }
+
+  function handleClear () {
+    const newTodos = todos.filter(todo => !todo.done)
+
+    setTodos(newTodos)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>My ToDo App</h1>
+      <ToDoList todos={todos} toggleTodo={toggleTodo} />
+      <input ref={todoInput} type="text" />
+      <button onClick={handleAdd}>Submit</button>
+      <button onClick={handleClear}>Clear</button>
+      <p>{todos.filter(todo => todo.done === false).length} left todos</p>
+    </>
   );
 }
 
