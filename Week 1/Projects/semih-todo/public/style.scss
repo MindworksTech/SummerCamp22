@@ -1,0 +1,128 @@
+$primary-color:#1C658C;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Rubik', sans-serif;
+}
+
+header {
+    background-color: $primary-color;
+    margin: auto -16px;
+    padding: 26px 32px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    h1 {
+        color: #EF5B0C;
+        font-weight: 200;
+        text-align: center;
+    }
+}
+
+body {
+    background-color: #EEEEEE;
+}
+
+.container {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+    max-width: 500px;
+    min-width: 250px;
+    background: #f1f5f8;
+    background-image: radial-gradient(#bfc0c1 7.2%, transparent 0);
+    background-size: 25px 25px;
+    border-radius: 20px;
+    box-shadow: 10px -10px 0 -3px $primary-color;
+    border-width: 3px;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    h1 {
+        transform: rotate(2deg);
+        padding: 0.2rem 1.2rem;
+        border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
+        background-color: #EF5B0C;
+        color: #1C658C;
+        font-size: 1.5rem;
+    }
+}
+
+.form {
+    input {
+        box-sizing: border-box;
+        background-color: transparent;
+        padding: 0.7rem;
+        border-bottom-right-radius: 15px 3px;
+        border-bottom-left-radius: 3px 15px;
+        border: solid 3px transparent;
+        border-bottom: dashed 3px #EF5B0C;
+        font-family: 'Rubik', sans-serif;
+        font-size: 1rem;
+        color: $primary-color;
+        width: 70%;
+        margin-bottom: 20px;
+        margin-left: 8%;
+    }
+}
+
+button {
+    padding: 0;
+    border: none;
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-radius: 5px;
+    background-color: #EF5B0C;
+    color: #1C658C;
+    margin-left: 4%;
+    span {
+        background: #f1f5f8;
+        display: block;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        border: 2px solid #1C658C;
+    }
+}
+
+#clear {
+    margin-left: 81.5%;
+}
+
+li {
+    text-align: left;
+    position: relative;
+    padding: 0.5rem;
+    margin-left: 12.5%;
+    color: #1C658C;
+    font-size: larger;
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    height: 3rem;
+    background-color: $primary-color;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    h3 {
+        margin-top: 15px;
+        color: #EF5B0C;
+        font-family: 'Rubik', sans-serif;
+    }
+}
