@@ -1,0 +1,32 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background-color: black;
+  flex-direction: row;
+  background-color: #4d4d4d;
+}
+header button {
+  color: white;
+  background-color: purple;
+}
+header button:hover {
+  background-color: red;
+}
+header h1 {
+  margin-right: 20%;
+}
+
+.div1 {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  height: 50vh;
+  background-color: green;
+  flex-direction: row;
+}
+.div1 button {
+  color: white;
+  background-color: purple;
+}/*# sourceMappingURL=styles.css.map */

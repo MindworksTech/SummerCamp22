@@ -1,0 +1,18 @@
+
+
+header {
+    @include flexPosition(center, 50vh, $headerBG);
+    @include checkBG($headerBG);
+
+    button {
+        color: $buttonColor;
+        background-color: $buttonBG;
+        &:hover {
+            background-color: red;
+        }
+    }
+
+    h1 {
+        margin-right: 100%-80%;
+    }
+}

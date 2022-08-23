@@ -1,0 +1,15 @@
+@import './variables';
+@import './mixins';
+@import './header';
+
+.div1 {
+
+    //@extend header;
+
+    @include flexPosition(right, 50vh, green);
+
+    button {
+        color: $buttonColor;
+        background-color: $buttonBG;
+    }
+}

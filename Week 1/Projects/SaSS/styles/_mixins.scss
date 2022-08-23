@@ -1,0 +1,14 @@
+@mixin flexPosition($align, $height, $color) {
+    display: flex;
+    justify-content: $align;
+    align-items: $align;
+    height: $height;
+    background-color: $color;
+    flex-direction: row;
+}
+
+@mixin checkBG($bg) {
+    @if $bg == black {
+        background-color: lighten($bg, 30%);
+    }
+}
